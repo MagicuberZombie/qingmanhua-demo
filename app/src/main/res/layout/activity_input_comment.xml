@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_comment_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bb000000">
+
+    <ImageView
+        android:id="@+id/iv_decoration"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_alignLeft="@+id/relative_comment"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/comment_decoration" />
+
+    <RelativeLayout
+        android:id="@+id/relative_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_decoration"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/comment_outside_shape"
+        android:clickable="true"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp">
+
+        <EditText
+            android:id="@+id/et_comic_commend"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/comment_inner_edge_shape"
+            android:gravity="top"
+            android:hint="@string/welcome"
+            android:maxLength="150"
+            android:minHeight="130dp"
+            android:paddingBottom="25dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/black_overlay"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_commend"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignRight="@id/et_comic_commend"
+            android:layout_below="@id/et_comic_commend"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="-25dp"
+            android:background="@drawable/send_icon"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

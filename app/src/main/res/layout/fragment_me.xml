@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/f6f6f6"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/relative_me_title"
+        layout="@layout/actionbar_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/e6e6e6" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/iv_line"
+                    android:background="@color/f6f6f6"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_system_btn"
+                android:padding="16dp">
+
+                <com.qf.demo.view.SelectableRoundedImageView
+                    android:id="@+id/iv_head"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/user_head_icon"
+                    app:sriv_border_color="@color/e6e6e6"
+                    app:sriv_border_width="2dp"
+                    app:sriv_left_bottom_corner_radius="100dp"
+                    app:sriv_left_top_corner_radius="100dp"
+                    app:sriv_oval="false"
+                    app:sriv_right_bottom_corner_radius="100dp"
+                    app:sriv_right_top_corner_radius="100dp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_toRightOf="@+id/iv_head">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/login_reg"
+                        android:textColor="@color/list_works"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_act_source"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_name"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/list_author"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/user_action"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/more_icon"
+                    android:clickable="false"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:layout_below="@+id/ll_main"
+                    android:background="@color/f6f6f6"
+                    android:contentDescription="@string/app_name" />
+
+                <ImageView
+                    android:id="@+id/ll_main"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/e6e6e6" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_mymessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_system_btn"
+                android:drawableLeft="@drawable/mymsg_icon"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/more_icon"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="@string/my_message"
+                android:textColor="@color/list_works"
+                android:textSize="@dimen/list_works_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/e6e6e6" />
+
+            <Button
+                android:id="@+id/btn_game_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_system_btn"
+                android:drawableLeft="@drawable/game_center"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/more_icon"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="@string/game_center"
+                android:textColor="@color/list_works"
+                android:textSize="@dimen/list_works_text_size"
+                android:visibility="gone" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/e6e6e6"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btn_setup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_system_btn"
+                android:drawableLeft="@drawable/setup_icon"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/more_icon"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="@string/setup"
+                android:textColor="@color/list_works"
+                android:textSize="@dimen/list_works_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/e6e6e6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:background="@color/e6e6e6" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:background="@color/f6f6f6"
+                    android:contentDescription="@string/app_name" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_system_btn"
+                android:drawableLeft="@drawable/feedback_icon"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/more_icon"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="@string/feedback"
+                android:textColor="@color/list_works"
+                android:textSize="@dimen/list_works_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/e6e6e6" />
+
+            <Button
+                android:id="@+id/btn_contact_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_system_btn"
+                android:drawableLeft="@drawable/contact_us_icon"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/more_icon"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="@string/contact_us"
+                android:textColor="@color/list_works"
+                android:textSize="@dimen/list_works_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dip"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@color/e6e6e6" />
+
+            <Button
+                android:id="@+id/btn_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_system_btn"
+                android:drawableLeft="@drawable/about_icon"
+                android:drawablePadding="16dp"
+                android:drawableRight="@drawable/more_icon"
+                android:gravity="center|left"
+                android:padding="16dp"
+                android:text="@string/about_app"
+                android:textColor="@color/list_works"
+                android:textSize="@dimen/list_works_text_size" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/e6e6e6" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

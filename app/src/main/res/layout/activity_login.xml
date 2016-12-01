@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comic">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relative_input">
+
+        <ImageView
+            android:id="@+id/iv_app_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/login_appicon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@id/relative_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <EditText
+            android:id="@+id/et_act_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/login_edit"
+            android:drawableLeft="@drawable/act_tips_icon"
+            android:hint="@string/act"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/et_pwd_login"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_below="@id/et_act_login"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/login_edit"
+            android:drawableLeft="@drawable/pwd_tips_icon"
+            android:hint="@string/pwd"
+            android:inputType="textPassword"
+            android:maxLength="25"
+            android:singleLine="true"
+            android:textColor="#ff000000"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_pwd_login"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/tv_text"
+                android:background="@drawable/login_btn"
+                android:text="@string/login"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="20dp"
+                android:layout_height="45dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null" />
+
+            <Button
+                android:id="@+id/btn_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/tv_text"
+                android:background="@drawable/login_edit"
+                android:text="@string/reg"
+                android:textColor="@color/list_desc" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/user_login_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" />
+
+    <ImageView
+        android:id="@id/iv_back"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:clickable="true"
+        android:onClick="backUserCenter"
+        android:src="@drawable/back_icon" />
+</RelativeLayout>

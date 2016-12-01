@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/relative_edit"
+        layout="@layout/search_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/relative_edit"
+        android:background="@color/e6e6e6" />
+
+    <RelativeLayout
+        android:id="@+id/relative_hit"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/iv_line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_search_hit"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search_history" />
+
+        <TextView
+            android:id="@+id/tv_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:text="@string/search_hit"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_delete_hit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:text="@string/clean_search_hit"
+            android:textColor="@color/comic"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sc_view"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@id/relative_hit">
+
+        <com.qf.demo.view.FlowLayout
+            android:id="@+id/flow_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="13dp" />
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/relative_hot"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/sc_view"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_search_hot"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/hot_search" />
+
+        <TextView
+            android:id="@+id/tv_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="35dp"
+            android:text="@string/search_hot"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_replace_hot"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="@string/replace"
+            android:textColor="@color/comic"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/iv_tag_update"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/btn_replace_hot"
+            android:background="@drawable/tag_update" />
+    </RelativeLayout>
+
+    <com.qf.demo.view.KeywordsFlow
+        android:id="@+id/key_flow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative_hot" />
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_system_btn"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relative_new_item_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.qf.demo.view.SelectableRoundedImageView
+            android:id="@id/iv_img"
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            app:sriv_left_bottom_corner_radius="@dimen/img_rounded"
+            app:sriv_left_top_corner_radius="@dimen/img_rounded"
+            app:sriv_right_bottom_corner_radius="@dimen/img_rounded"
+            app:sriv_right_top_corner_radius="@dimen/img_rounded" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/iv_img"
+            android:drawablePadding="5dp"
+            android:ellipsize="end"
+            android:gravity="left"
+            android:maxLines="1"
+            android:paddingRight="15dp"
+            android:textColor="@color/list_works"
+            android:textSize="16dp" />
+
+        <LinearLayout
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_alignLeft="@id/tv_title"
+            android:layout_below="@id/tv_title"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:orientation="horizontal"
+            android:textColor="@color/list_author" />
+    </RelativeLayout>
+</LinearLayout>

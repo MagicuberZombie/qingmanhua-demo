@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dan_hui">
+
+    <include
+        android:id="@+id/layout_title"
+        layout="@layout/title_white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.qf.demo.view.AnimatedExpandableListView
+        android:id="@+id/exp_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/layout_title"
+        android:childDivider="@color/e6e6e6"
+        android:divider="@color/e6e6e6"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/selector_system_btn"
+        android:scrollbars="none" />
+</RelativeLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/comic">
+
+    <RelativeLayout
+        android:id="@id/relative_back"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/selector_system_btn"
+        android:visibility="gone"
+        android:paddingRight="7dp">
+
+        <Button
+            android:id="@id/btn_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:background="@drawable/back_icon"
+            android:clickable="false"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/btn_search"
+        android:layout_toRightOf="@id/relative_back"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
+
+        <EditText
+            android:id="@+id/et_search"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/shape_search_top"
+            android:hint="@string/hit_search"
+            android:imeOptions="actionSearch"
+            android:maxLength="15"
+            android:paddingLeft="40dp"
+            android:singleLine="true"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@id/et_search"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/search_left" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignRight="@id/et_search"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:background="@drawable/search_clear" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/search_button"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+</RelativeLayout>

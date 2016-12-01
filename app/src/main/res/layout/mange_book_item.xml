@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_works"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/iv_item_img"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_item_img"
+            android:text="作品"
+            android:textColor="@color/list_works"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@id/tv_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_works"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/iv_item_img"
+            android:text="作者"
+            android:textColor="@color/list_author"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/iv_item_img"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@+id/btn_delete"
+            android:layout_toRightOf="@id/iv_item_img"
+            android:paddingRight="5dp"
+            android:text="话啊啊啊啊啊啊啊啊啊"
+            android:textColor="@color/list_author"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@id/btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/selector_delete"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="@string/delete"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <CheckBox
+            android:id="@+id/cb_manage"
+            style="@style/MyCheckBox"
+            android:layout_width="60dp"
+            android:scaleX="0.6"
+            android:scaleY="0.6"
+            android:layout_height="match_parent"
+            android:button="@drawable/checkbox_book_manage"
+            android:gravity="center" />
+
+        <com.qf.demo.view.SelectableRoundedImageView
+            android:id="@+id/iv_item_img"
+            android:layout_width="100dp"
+            android:layout_height="125dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/cb_manage"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/write_back"
+            app:sriv_left_bottom_corner_radius="@dimen/img_rounded"
+            app:sriv_left_top_corner_radius="@dimen/img_rounded"
+            app:sriv_right_bottom_corner_radius="@dimen/img_rounded"
+            app:sriv_right_top_corner_radius="@dimen/img_rounded" />
+    </RelativeLayout>
+</LinearLayout>

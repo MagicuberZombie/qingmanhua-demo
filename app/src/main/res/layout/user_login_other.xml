@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/comic"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_other_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/other_login"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <ImageView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/line_other_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_qq"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:onClick="otherLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="@drawable/qq_icon"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/iv_weixin"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:onClick="otherLogin"
+            android:background="@drawable/weixin_icon"
+            android:clickable="true" />
+    </LinearLayout>
+</LinearLayout>

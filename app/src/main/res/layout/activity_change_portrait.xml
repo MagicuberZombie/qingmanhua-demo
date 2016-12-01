@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#bb000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/shape_change_username"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_open_album"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_system_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/album"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/e6e6e6" />
+
+        <TextView
+            android:id="@+id/tv_open_camera"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/selector_system_btn"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/camera"
+            android:textColor="@color/black" />
+    </LinearLayout>
+</RelativeLayout>
